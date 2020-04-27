@@ -28,7 +28,7 @@ user_query = """SELECT DISTINCT ut.userId as user_id,
                         """
 
 # This query will read in the timestamp column from the dataframe and convert it to timestamp in SQL
-time_query = """SELECT tms.start_time_sub as start_time,
+time_query = """SELECT DISTINCT tms.start_time_sub as start_time,
                             hour(tms.start_time_sub) as hour,
                             dayofmonth(tms.start_time_sub) as day,
                             weekofyear(tms.start_time_sub) as week,
